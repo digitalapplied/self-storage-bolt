@@ -22,22 +22,12 @@ const UnitCard: React.FC<UnitCardProps> = ({
   return (
     <div className={`relative p-6 lg:p-8 rounded-3xl transition-all duration-300 hover:shadow-xl hover:transform hover:-translate-y-1 ${
       isSpecial 
-        ? 'bg-white border-2 border-emerald-600 shadow-lg hover:shadow-emerald-600/30' 
+        ? 'bg-white border-2 border-emerald-500 shadow-lg hover:shadow-emerald-500/30' 
         : 'bg-gray-50 hover:bg-white hover:shadow-lg border border-transparent hover:border-gray-200'
     }`}>
       {isSpecial && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <div className="relative">
-            <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-2.5 rounded-full shadow-lg">
-              <div className="flex items-center gap-2">
-                <span className="text-xs lg:text-sm font-bold tracking-wide">✨ SPECIAL OFFER</span>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full animate-pulse opacity-75"></div>
-            </div>
-            {/* Decorative elements */}
-            <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-bounce"></div>
-            <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-yellow-300 rounded-full animate-pulse"></div>
-          </div>
+        <div className="absolute top-0 right-0 bg-orange-500 text-white px-3 py-1 text-xs font-semibold rounded-bl-lg rounded-tr-3xl">
+          SPECIAL
         </div>
       )}
       
