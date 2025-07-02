@@ -32,7 +32,7 @@ const CTA: React.FC = () => {
         </button>
         
         <p className="text-emerald-200 text-sm mt-6">
-          🔒 Secure reservation • 💬 30-minute response guarantee
+          Free reservation • Change your mind anytime
         </p>
       </div>
     </section>
