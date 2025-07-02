@@ -65,7 +65,7 @@ const ReservationForm: React.FC = () => {
         <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
         <Users className="w-4 h-4 text-emerald-700" />
         <span className="text-emerald-800 font-medium text-sm">
-          Limited availability • 21 special offer units remaining
+          Limited availability • 22 special offer units remaining
         </span>
       </div>
 
@@ -144,7 +144,8 @@ const ReservationForm: React.FC = () => {
             className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-colors bg-gray-50 focus:bg-white"
           >
             <option value="5x2">5m × 2m - R986/month (VAT incl.)</option>
-            <option value="6x3">6m × 3m - R1,000/month (Special - Save R625)</option>
+            <option value="6x3">6m × 3m - R999/month (Special Rate)</option>
+            <option value="6x5">6m × 5m - R2,374/month (VAT incl.)</option>
             <option value="9x3">9m × 3m - R2,374/month (VAT incl.)</option>
           </select>
         </div>

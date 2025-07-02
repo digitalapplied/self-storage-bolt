@@ -34,16 +34,15 @@ const Hero: React.FC = () => {
               </div>
               
               <div className="flex items-baseline gap-4 mb-3">
-                <span className="text-2xl text-gray-400 line-through">R1,625</span>
-                <span className="text-4xl font-bold text-emerald-700">R1,000</span>
+                <span className="text-4xl font-bold text-emerald-700">R999</span>
                 <span className="text-gray-600">/month</span>
               </div>
               
-              <p className="text-sm text-gray-500 mb-6">VAT inclusive • Save R625 monthly</p>
+              <p className="text-sm text-gray-500 mb-6">VAT inclusive • Special rate</p>
               
               <div className="bg-emerald-50 p-4 rounded-xl">
                 <p className="text-emerald-800 font-medium text-center">
-                  🎯 Only 21 units available at this special price
+                  🎯 Only 22 units available at this special price
                 </p>
               </div>
             </div>

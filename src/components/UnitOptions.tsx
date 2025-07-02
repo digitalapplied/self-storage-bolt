@@ -20,40 +20,40 @@ const UnitCard: React.FC<UnitCardProps> = ({
   originalPrice
 }) => {
   return (
-    <div className={`relative p-8 rounded-3xl transition-all duration-300 hover:shadow-xl ${
+    <div className={`relative p-6 lg:p-8 rounded-3xl transition-all duration-300 hover:shadow-xl hover:transform hover:-translate-y-1 ${
       isSpecial 
-        ? 'bg-white border-2 border-emerald-600 shadow-lg hover:shadow-emerald-600/20' 
+        ? 'bg-white border-2 border-emerald-600 shadow-lg hover:shadow-emerald-600/30' 
         : 'bg-gray-50 hover:bg-white hover:shadow-lg border border-transparent hover:border-gray-200'
     }`}>
       {isSpecial && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <span className="bg-emerald-600 text-white px-6 py-2 rounded-full text-sm font-semibold tracking-wide">
+          <span className="bg-emerald-600 text-white px-4 py-2 rounded-full text-xs lg:text-sm font-semibold tracking-wide">
             SPECIAL OFFER
           </span>
         </div>
       )}
       
-      <div className="text-center mb-6">
-        <h3 className="text-3xl font-bold text-gray-900 mb-2">{dimensions}</h3>
-        <div className={`text-4xl font-bold mb-2 ${isSpecial ? 'text-emerald-600' : 'text-gray-900'}`}>
+      <div className="text-center mb-4 lg:mb-6">
+        <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">{dimensions}</h3>
+        <div className={`text-3xl lg:text-4xl font-bold mb-2 ${isSpecial ? 'text-emerald-600' : 'text-gray-900'}`}>
           {price}
         </div>
         <p className="text-gray-500 text-sm">per month, VAT included</p>
         
         {originalPrice && (
-          <p className="text-xl text-gray-400 line-through mt-2">Regular: {originalPrice}</p>
+          <p className="text-lg lg:text-xl text-gray-400 line-through mt-2">Regular: {originalPrice}</p>
         )}
         
-        <p className={`text-sm font-medium mt-3 ${availabilityColor}`}>
+        <p className={`text-xs lg:text-sm font-medium mt-3 ${availabilityColor}`}>
           {availability}
         </p>
       </div>
       
       <div>
-        <p className="font-medium text-gray-900 mb-3">Ideal for:</p>
-        <ul className="space-y-2">
+        <p className="font-medium text-gray-900 mb-3 text-sm lg:text-base">Ideal for:</p>
+        <ul className="space-y-1.5 lg:space-y-2">
           {idealFor.map((item, index) => (
-            <li key={index} className="text-gray-600 text-sm flex items-center gap-2">
+            <li key={index} className="text-gray-600 text-xs lg:text-sm flex items-start gap-2">
               <span className="w-1.5 h-1.5 bg-emerald-600 rounded-full flex-shrink-0"></span>
               {item}
             </li>
@@ -66,7 +66,7 @@ const UnitCard: React.FC<UnitCardProps> = ({
 
 const UnitOptions: React.FC = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
@@ -77,11 +77,11 @@ const UnitOptions: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-4 gap-6">
           <UnitCard
             dimensions="5m × 2m"
             price="R986"
-            availability="13 units available"
+            availability="14 units available"
             availabilityColor="text-emerald-600"
             idealFor={[
               'Studio or 1-bedroom contents',
@@ -93,10 +93,9 @@ const UnitOptions: React.FC = () => {
           
           <UnitCard
             dimensions="6m × 3m"
-            price="R1,000"
-            originalPrice="R1,625"
+            price="R999"
             isSpecial={true}
-            availability="21 units at special price"
+            availability="22 units at special price"
             availabilityColor="text-orange-600"
             idealFor={[
               '2-bedroom home contents',
@@ -107,12 +106,25 @@ const UnitOptions: React.FC = () => {
           />
           
           <UnitCard
-            dimensions="9m × 3m"
+            dimensions="6m × 5m"
             price="R2,374"
-            availability="Only 4 units left"
+            availability="Only 1 unit left"
             availabilityColor="text-red-600"
             idealFor={[
-              '3+ bedroom house',
+              'Large household contents',
+              'Business inventory',
+              'Multiple room storage',
+              'Commercial equipment'
+            ]}
+          />
+          
+          <UnitCard
+            dimensions="9m × 3m"
+            price="R2,374"
+            availability="Only 3 units left"
+            availabilityColor="text-red-600"
+            idealFor={[
+              '3+ bedroom house contents',
               'Large inventory storage',
               'Multiple vehicles',
               'Commercial goods'
