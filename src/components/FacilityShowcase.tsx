@@ -27,12 +27,12 @@ const FacilityShowcase: React.FC = () => {
 
           <div className="lg:pl-8">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              State-of-the-Art Storage Facility
+              Where Security Meets Convenience
             </h2>
             
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Our Pretoria facility offers premium storage solutions in a secure, climate-controlled environment. 
-              With over 95 years of experience, Biddulphs provides the peace of mind you deserve.
+              Our Pretoria facility offers premium storage solutions with maximum security and easy accessibility. 
+              With over 95 years of trusted experience, Biddulphs provides the peace of mind you deserve.
             </p>
             
             <div className="space-y-4">
