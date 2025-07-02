@@ -20,10 +20,10 @@ const UnitCard: React.FC<UnitCardProps> = ({
   originalPrice
 }) => {
   return (
-    <div className={`relative p-6 lg:p-8 rounded-3xl transition-all duration-300 hover:shadow-xl hover:transform hover:-translate-y-1 ${
+    <div className={`relative p-6 lg:p-8 rounded-3xl ${
       isSpecial 
-        ? 'bg-white border-2 border-emerald-500 shadow-lg hover:shadow-emerald-500/30' 
-        : 'bg-gray-50 hover:bg-white hover:shadow-lg border border-transparent hover:border-gray-200'
+        ? 'bg-white border-2 border-emerald-500 shadow-lg' 
+        : 'bg-gray-50 border border-gray-200'
     }`}>
       {isSpecial && (
         <div className="absolute top-0 right-0 bg-orange-500 text-white px-3 py-1 text-xs font-semibold rounded-bl-lg rounded-tr-3xl">
